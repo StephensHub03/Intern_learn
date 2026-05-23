@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+  }
+  
+  p {
+    color: #e5e5e5;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background-color: #00ea64;
+    color: #000000;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    box-shadow: 0 0 20px rgba(0, 234, 100, 0.3);
+  }
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 24px rgba(0, 234, 100, 0.45);
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .btn-secondary {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover {
+    background-color: #2a2a2a;
+    border-color: rgba(0, 234, 100, 0.3);
+  }
+  
+  .btn-danger {
+    background-color: #dc2626;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+  .btn-danger:hover {
+    background-color: #b91c1c;
+  }
+  
+  .btn-gold {
+    background-color: #00ea64;
+    color: #000000;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    box-shadow: 0 0 20px rgba(0, 234, 100, 0.3);
+  }
+  .btn-gold:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 24px rgba(0, 234, 100, 0.45);
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+  .input-field:focus {
+    outline: none;
+    border-color: #00ea64;
+    box-shadow: 0 0 0 3px rgba(0, 234, 100, 0.1);
+    background-color: #111111;
+  }
+  .input-field::placeholder {
+    color: #888888;
+  }
+  .input-field option {
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+  
+  .card {
+    background-color: #111111;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+}
