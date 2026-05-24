@@ -23,7 +23,6 @@ proc_name = "internship_platform"
 
 # Server mechanics
 daemon = False
-pidfile = "/run/gunicorn/internship_platform.pid"
 umask = 0
 user = None
 group = None
