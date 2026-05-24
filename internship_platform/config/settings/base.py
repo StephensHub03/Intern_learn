@@ -1,10 +1,17 @@
 """
 Base settings for internship_platform project.
 """
+import dj_database_url
 import os
 from pathlib import Path
 from decouple import config
 from datetime import timedelta
+
+DATABASES = {
+    "default": dj_database_url.config(
+        default=os.environ.get("DATABASE_URL")
+    )
+}
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -64,18 +71,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
-# Database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME', default='internship_db'),
-        'USER': config('DB_USER', default='postgres'),
-        'PASSWORD': config('DB_PASSWORD', default=''),
-        'HOST': config('DB_HOST', default='localhost'),
-        'PORT': config('DB_PORT', default='5432'),
-    }
-}
 
 # Auth
 AUTH_USER_MODEL = 'users.User'
